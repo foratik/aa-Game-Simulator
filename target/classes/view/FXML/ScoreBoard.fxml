@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.view.ScoreBoard"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <Button fx:id="back" onMouseClicked="#back" text="back" layoutX="750" layoutY="10"/>
+    <TabPane>
+
+        <Tab text="Total">
+            <ScrollPane prefHeight="450" prefWidth="50">
+                <GridPane fx:id="total" hgap="40" vgap="5"/>
+            </ScrollPane>
+        </Tab>
+
+        <Tab text="Easy">
+            <ScrollPane prefHeight="450" prefWidth="800">
+                <GridPane fx:id="easy" hgap="40" vgap="5"/>
+            </ScrollPane>
+        </Tab>
+
+        <Tab text="Medium">
+            <ScrollPane prefHeight="450" prefWidth="50">
+                <GridPane fx:id="medium" hgap="40" vgap="5"/>
+            </ScrollPane>
+        </Tab>
+
+        <Tab text="Hard">
+            <ScrollPane prefHeight="450" prefWidth="50">
+                <GridPane fx:id="hard" hgap="40" vgap="5"/>
+            </ScrollPane>
+        </Tab>
+
+    </TabPane>
+
+</AnchorPane>

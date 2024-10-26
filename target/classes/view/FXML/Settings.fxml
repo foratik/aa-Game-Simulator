@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.controller.SettingsController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Image/Background.jpg"/>
+    </ImageView>
+
+    <VBox layoutX="350" layoutY="100" spacing="15">
+
+        <ChoiceBox fx:id="hardness" value="Game Hardness" prefWidth="100.0" />
+        <ChoiceBox fx:id="ballsCount" value="Game Hardness" prefWidth="100.0" />
+
+        <Button fx:id="shootKey" text="change shoot key" onMouseClicked="#changeShootKey"/>
+        <Button fx:id="freezeKey" text="change freeze key" onMouseClicked="#changeFreezeKey"/>
+        <Button fx:id="rightKey" text="change right key" onMouseClicked="#changeRightKey"/>
+        <Button fx:id="leftKey" text="change left key" onMouseClicked="#changeLeftKey"/>
+        <Button fx:id="back" text="back" onMouseClicked="#back"/>
+
+    </VBox>
+
+
+</AnchorPane>

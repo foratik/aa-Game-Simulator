@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo.controller.GameController"
+      prefHeight="500.0" prefWidth="800.0">
+
+
+    <VBox layoutX="680.0" layoutY="20.0" spacing="10">
+        <ProgressBar fx:id="progressBar"  prefWidth="100.0" progress="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" />
+        <Text fx:id="leftBalls" text="Balls left :" />
+        <Text fx:id="degree" text="degree : 0" />
+        <Text fx:id="time" text="Time Left :" />
+    </VBox>
+
+    <Circle fx:id="mainCircle" fill="BLACK" centerX="450" centerY="180" radius="50.0" stroke="BLACK" strokeType="INSIDE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" />
+    <Circle fx:id="secondPlayer" fill="BLACK" centerX="450" radius="10.0" stroke="BLACK" strokeType="INSIDE"/>
+    <Text fx:id="scoreText" fill="white" layoutX="435" layoutY="185"/>
+
+    <ImageView fx:id="muteButton" fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="20.0"
+               onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </ImageView>
+    <ImageView fx:id="pauseButton" fitHeight="30.0" fitWidth="30.0" layoutX="60.0" layoutY="20.0"
+               onMouseClicked="#pause" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Image/pause.png"/>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </ImageView>
+    <ImageView fx:id="pauseMenu" fitHeight="480.0" fitWidth="300.0" layoutX="250.0" layoutY="20.0"
+               pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Image/pauseMenu.png"/>
+    </ImageView>
+    <ImageView fx:id="endWindow" fitHeight="480.0" fitWidth="300.0" layoutX="50.0" layoutY="50.0"
+               pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Image/end.png"/>
+    </ImageView>
+    <VBox fx:id="endVBox" layoutX="120.0" layoutY="150.0" spacing="10">
+        <Text fx:id="finalScore"/>
+        <Text fx:id="elapsedSeconds"/>
+        <Button fx:id="scoreBoard" text="Score Board" onMouseClicked="#scoreBoard"/>
+        <Button fx:id="backToProfile" text="Back to Profile" onMouseClicked="#backToProfile"/>
+    </VBox>
+    <VBox layoutX="350.0" layoutY="110.0" spacing="10" fx:id="pauseVBox">
+        <Button fx:id="restart" text="restart" onMouseClicked="#restart"/>
+        <Button fx:id="endGame" text="end game" onMouseClicked="#endGame"/>
+        <Button fx:id="saveGame" text="save game" onMouseClicked="#saveGame"/>
+        <Button fx:id="pauseMusic" text="pause music" onMouseClicked="#pauseMusic"/>
+        <Button fx:id="playMusic" text="play music" onMouseClicked="#playMusic"/>
+        <Button fx:id="resume" text="continue" onMouseClicked="#resume"/>
+        <Text fx:id="shootingKey"/>
+        <Text fx:id="freezingKey"/>
+        <Text fx:id="rightKey"/>
+        <Text fx:id="leftKey"/>
+    </VBox>
+
+</Pane>
